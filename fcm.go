@@ -131,6 +131,11 @@ func (this *FcmClient) NewFcmRegIdsMsg(list []string, body interface{}) *FcmClie
 
 }
 
+// SetFcmServerUrl updates the url target
+func SetFcmServerUrl(url string) {
+	fcmServerUrl = url
+}
+
 // newDevicesList init the devices list
 func (this *FcmClient) newDevicesList(list []string) *FcmClient {
 	this.Message.RegistrationIds = make([]string, len(list))
